@@ -1,22 +1,13 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
+
 """
-State module
-this module have and manage State Entity
+State class that inherits from BaseModel
 """
+
 from models.base_model import BaseModel
 
 
 class State(BaseModel):
-    """
-    Public class attributes:
-        name: string - empty string
-    """
-    name = ''
+    """ Class that defines attributes for a state """
 
-    def __init__(self, *args, **kwargs):
-        if len(kwargs) == 0:
-            super().__init__()
-
-        # if kwargs have values
-        if len(kwargs) > 0:
-            super().__init__(**kwargs)
+    name = ""
